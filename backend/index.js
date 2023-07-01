@@ -1,7 +1,15 @@
 const express = require("express");
 const app = express();
 const router = require("./routes/expense.routes");
+app.use(morgan("dev"));
+
 // middleware
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
+app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 app.use(express.json());
 const PORT = 3300;
 
