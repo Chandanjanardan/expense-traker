@@ -1,8 +1,16 @@
 const express = require("express");
 const router = express.Router();
-const { homePage } = require("../controller/expense.controller");
-// get home page
-router.get("/", homePage);
+const { addExpense, viewExpense, updateExpense, deleteExpense } = require("../controller/expense.Controller");
+
+
+//add Expense
+router.get("/addExpense", addExpense);
+//view Expense
+router.get("/viewExpense", viewExpense);
+//update Expense
+router.get("/updateExpense", updateExpense);
+//delete Expense
+router.get("/deleteExpense", deleteExpense);
 
 
 module.exports = router;
