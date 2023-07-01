@@ -103,7 +103,7 @@ Expense mgt
 - POST : Delete Expense --> authenticate --> Change type : inactive --> delete
     * INPUT jSON : 
     {
-        expenseid: expemseId
+        expenseid: expenseId
     }
 
     * OUTPUT JSON : 
