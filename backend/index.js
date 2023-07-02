@@ -16,6 +16,7 @@ const PORT = 3300;
 app.use("/budget", require("./routes/budget.routes"));
 app.use("/expense", require("./routes/expense.routes"));
 app.use("/user", require("./routes/user.routes"));
+// app.use("/users", require("./routes/user.routes"));
 
 app.listen(PORT, (req, res) => {
   console.log(`Listing at PORT ${PORT}...`);
